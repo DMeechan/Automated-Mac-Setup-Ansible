@@ -1,0 +1,53 @@
+# TODO: Not got App Store automation working yet
+app_store:
+  - trello
+  - simplenote
+
+homebrew_taps:
+  - homebrew/core
+  - homebrew/cask
+
+homebrew_packages:
+  - ansible
+  - blueutil
+  - carthage
+  - elixir
+  - git
+  - go
+  - handbrake
+  - mongodb
+  - mysql
+  - nginx
+  - node
+  - openssl
+  - phantomjs
+  - python
+  - selenium-server-standalone
+  - wget
+  - yarn
+  - zsh
+
+homebrew_cask_packages:
+  - alfred
+  - anki
+  - chromedriver
+  - disk-inventory-x
+  - discord
+  - docker
+  - filezilla
+  - google-chrome
+  - gyazo
+  - handbrake
+  - iterm2
+  - ngrok
+  - spotify
+  - sublime-text
+  - the-unarchiver
+  - visual-studio-code
+  - virtualbox
+  - vagrant
+  - vlc
+
+yarn_global_packages:
+  - "n"
+  - "@vue/cli"

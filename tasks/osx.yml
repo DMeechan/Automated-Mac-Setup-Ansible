@@ -1,0 +1,4 @@
+- name: OS X Global | Show all extensions
+  osx_defaults:
+    key: AppleShowAllExtensions
+    bool: true

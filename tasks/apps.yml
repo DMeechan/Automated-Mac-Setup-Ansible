@@ -1,0 +1,40 @@
+- name: homebrew taps
+  homebrew_tap:
+    tap: '{{ item }}'
+  with_items: '{{ homebrew_taps }}'
+  tags:
+    - brew
+
+- name: Update homebrew
+  homebrew:
+    name: git
+    state: latest
+    update_homebrew: true
+  tags:
+    - brew
+
+- name: Install homebrew packages
+  homebrew:
+    name: '{{ item }}'
+    state: latest
+  with_items: '{{ homebrew_packages }}'
+  tags:
+    - brew
+
+- name: Install homebrew cask packages
+  homebrew_cask:
+    name: '{{ item }}'
+    state: latest
+  with_items: '{{ homebrew_cask_packages }}'
+  tags:
+    - brew
+
+# TODO: Can't seem to get Yarn module working
+# - name: Install Yarn global packages
+#   yarn:
+#     name: '{{ item }}'
+#     state: latest
+#     global: yes
+#   with_items: '{{ yarn_global_packages }}'
+#   tags:
+#     - yarn
