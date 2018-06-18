@@ -2,15 +2,15 @@
 - hosts: 127.0.0.1
   connection: local
   vars_files:
-    - config/apps.yml
-    - config/configure.yml
+    - vars/apps.yml
+    - vars/app_settings.yml
   roles:
     # - elliotweiser.osx-command-line-tools
     # https://github.com/elliotweiser/ansible-osx-command-line-tools
   tasks:
     # - name: Install apps
     #   import_tasks: tasks/apps.yml
-    - name: Configure apps
-      import_tasks: tasks/configure.yml
-    # - name: Configure OSX
-    #   import_tasks: tasks/osx.yml
+    # - name: Configure apps
+    #   import_tasks: tasks/app_settings.yml
+    - name: Configure OSX
+      import_tasks: tasks/osx.yml

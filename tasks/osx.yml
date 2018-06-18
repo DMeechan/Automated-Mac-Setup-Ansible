@@ -1,4 +1,15 @@
 - name: OS X Global | Show all extensions
   osx_defaults:
     key: AppleShowAllExtensions
-    bool: true
+    type: bool
+    value: true
+    state: present
+
+- name: Dock | Size
+  osx_defaults:
+    domain: com.apple.dock
+    key: tilesize
+    type: float
+    value: 38
+  notify: kill dock
+# TODO: Kill dock doesn't seem to work
