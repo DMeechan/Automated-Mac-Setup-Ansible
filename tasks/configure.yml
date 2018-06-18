@@ -1,0 +1,11 @@
+- name: Configire Git name
+  git_config:
+    name: user.name
+    scope: global
+    value: '{{ my_name }}'
+
+- name: Configire Git email
+  git_config:
+    name: user.email
+    scope: global
+    value: '{{ my_email }}'

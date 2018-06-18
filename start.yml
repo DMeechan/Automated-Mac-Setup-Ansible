@@ -3,11 +3,14 @@
   connection: local
   vars_files:
     - config/apps.yml
+    - config/configure.yml
   roles:
-    - elliotweiser.osx-command-line-tools
+    # - elliotweiser.osx-command-line-tools
     # https://github.com/elliotweiser/ansible-osx-command-line-tools
   tasks:
-    - name: Install packages
-      import_tasks: install_apps.yml
-    - name: Configure OSX
-      import_tasks: setup_osx.yml
+    # - name: Install apps
+    #   import_tasks: tasks/apps.yml
+    - name: Configure apps
+      import_tasks: tasks/configure.yml
+    # - name: Configure OSX
+    #   import_tasks: tasks/osx.yml
